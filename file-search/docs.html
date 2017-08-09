@@ -1,0 +1,960 @@
+use 'godoc cmd/github.com/buger/goterm' for documentation on the github.com/buger/goterm command 
+
+<!--
+	Copyright 2009 The Go Authors. All rights reserved.
+	Use of this source code is governed by a BSD-style
+	license that can be found in the LICENSE file.
+-->
+<!--
+	Note: Static (i.e., not template-generated) href and id
+	attributes start with "pkg-" to make it impossible for
+	them to conflict with generated attributes (some of which
+	correspond to Go identifiers).
+-->
+
+	<script type='text/javascript'>
+	document.ANALYSIS_DATA = ;
+	document.CALLGRAPH = ;
+	</script>
+
+	
+		
+		<div id="short-nav">
+			<dl>
+			<dd><code>import "github.com/buger/goterm"</code></dd>
+			</dl>
+			<dl>
+			<dd><a href="#pkg-overview" class="overviewLink">Overview</a></dd>
+			<dd><a href="#pkg-index" class="indexLink">Index</a></dd>
+			
+			
+				<dd><a href="#pkg-subdirectories">Subdirectories</a></dd>
+			
+			</dl>
+		</div>
+		<!-- The package's Name is printed as title by the top-level template -->
+		<div id="pkg-overview" class="toggleVisible">
+			<div class="collapsed">
+				<h2 class="toggleButton" title="Click to show Overview section">Overview ▹</h2>
+			</div>
+			<div class="expanded">
+				<h2 class="toggleButton" title="Click to hide Overview section">Overview ▾</h2>
+				<p>
+Provides basic bulding blocks for advanced console UI
+</p>
+<p>
+Coordinate system:
+</p>
+<pre>1/1---X----&gt;
+ |
+ Y
+ |
+ v
+</pre>
+<p>
+Documentation for ANSI codes: <a href="http://en.wikipedia.org/wiki/ANSI_escape_code#Colors">http://en.wikipedia.org/wiki/ANSI_escape_code#Colors</a>
+</p>
+<p>
+Inspired by: <a href="http://www.darkcoding.net/software/pretty-command-line-console-output-on-unix-in-python-and-go-lang/">http://www.darkcoding.net/software/pretty-command-line-console-output-on-unix-in-python-and-go-lang/</a>
+</p>
+
+			</div>
+		</div>
+		
+
+		<div id="pkg-index" class="toggleVisible">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Index section">Index ▹</h2>
+		</div>
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Index section">Index ▾</h2>
+
+		<!-- Table of contents for API; must be named manual-nav to turn off auto nav. -->
+			<div id="manual-nav">
+			<dl>
+			
+				<dd><a href="#pkg-constants">Constants</a></dd>
+			
+			
+				<dd><a href="#pkg-variables">Variables</a></dd>
+			
+			
+				
+				<dd><a href="#Background">func Background(str string, color int) string</a></dd>
+			
+				
+				<dd><a href="#Bold">func Bold(str string) string</a></dd>
+			
+				
+				<dd><a href="#Clear">func Clear()</a></dd>
+			
+				
+				<dd><a href="#Color">func Color(str string, color int) string</a></dd>
+			
+				
+				<dd><a href="#Context">func Context(data string, idx, max int) string</a></dd>
+			
+				
+				<dd><a href="#CurrentHeight">func CurrentHeight() int</a></dd>
+			
+				
+				<dd><a href="#Flush">func Flush()</a></dd>
+			
+				
+				<dd><a href="#GetXY">func GetXY(x int, y int) (int, int)</a></dd>
+			
+				
+				<dd><a href="#Height">func Height() int</a></dd>
+			
+				
+				<dd><a href="#Highlight">func Highlight(str, substr string, color int) string</a></dd>
+			
+				
+				<dd><a href="#HighlightRegion">func HighlightRegion(str string, from, to, color int) string</a></dd>
+			
+				
+				<dd><a href="#MoveCursor">func MoveCursor(x int, y int)</a></dd>
+			
+				
+				<dd><a href="#MoveCursorBackward">func MoveCursorBackward(bias int)</a></dd>
+			
+				
+				<dd><a href="#MoveCursorDown">func MoveCursorDown(bias int)</a></dd>
+			
+				
+				<dd><a href="#MoveCursorForward">func MoveCursorForward(bias int)</a></dd>
+			
+				
+				<dd><a href="#MoveCursorUp">func MoveCursorUp(bias int)</a></dd>
+			
+				
+				<dd><a href="#MoveTo">func MoveTo(str string, x int, y int) (out string)</a></dd>
+			
+				
+				<dd><a href="#Print">func Print(a ...interface{}) (n int, err error)</a></dd>
+			
+				
+				<dd><a href="#Printf">func Printf(format string, a ...interface{}) (n int, err error)</a></dd>
+			
+				
+				<dd><a href="#Println">func Println(a ...interface{}) (n int, err error)</a></dd>
+			
+				
+				<dd><a href="#ResetLine">func ResetLine(str string) (out string)</a></dd>
+			
+				
+				<dd><a href="#Width">func Width() int</a></dd>
+			
+			
+				
+				<dd><a href="#Box">type Box</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewBox">func NewBox(width, height int, flags int) *Box</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Box.String">func (b *Box) String() (out string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Box.Write">func (b *Box) Write(p []byte) (int, error)</a></dd>
+				
+			
+				
+				<dd><a href="#Chart">type Chart</a></dd>
+				
+				
+			
+				
+				<dd><a href="#DataTable">type DataTable</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DataTable.AddColumn">func (d *DataTable) AddColumn(name string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#DataTable.AddRow">func (d *DataTable) AddRow(elms ...float64)</a></dd>
+				
+			
+				
+				<dd><a href="#LineChart">type LineChart</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewLineChart">func NewLineChart(width, height int) *LineChart</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#LineChart.Draw">func (c *LineChart) Draw(data *DataTable) (out string)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#LineChart.DrawAxes">func (c *LineChart) DrawAxes(maxX, minX, maxY, minY float64, index int)</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#LineChart.DrawLine">func (c *LineChart) DrawLine(x0, y0, x1, y1 int, symbol string)</a></dd>
+				
+			
+				
+				<dd><a href="#Table">type Table</a></dd>
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#NewTable">func NewTable(minwidth, tabwidth, padding int, padchar byte, flags uint) *Table</a></dd>
+				
+				
+					
+					<dd>&nbsp; &nbsp; <a href="#Table.String">func (t *Table) String() string</a></dd>
+				
+			
+			
+			</dl>
+			</div><!-- #manual-nav -->
+
+		
+
+		
+			<h4>Package files</h4>
+			<p>
+			<span style="font-size:90%">
+			
+				<a href="/src/github.com/buger/goterm/box.go">box.go</a>
+			
+				<a href="/src/github.com/buger/goterm/plot.go">plot.go</a>
+			
+				<a href="/src/github.com/buger/goterm/table.go">table.go</a>
+			
+				<a href="/src/github.com/buger/goterm/terminal.go">terminal.go</a>
+			
+				<a href="/src/github.com/buger/goterm/terminal_sysioctl.go">terminal_sysioctl.go</a>
+			
+			</span>
+			</p>
+		
+		</div><!-- .expanded -->
+		</div><!-- #pkg-index -->
+
+		<div id="pkg-callgraph" class="toggle" style="display: none">
+		<div class="collapsed">
+			<h2 class="toggleButton" title="Click to show Internal Call Graph section">Internal call graph ▹</h2>
+		</div> <!-- .expanded -->
+		<div class="expanded">
+			<h2 class="toggleButton" title="Click to hide Internal Call Graph section">Internal call graph ▾</h2>
+			<p>
+			  In the call graph viewer below, each node
+			  is a function belonging to this package
+			  and its children are the functions it
+			  calls&mdash;perhaps dynamically.
+			</p>
+			<p>
+			  The root nodes are the entry points of the
+			  package: functions that may be called from
+			  outside the package.
+			  There may be non-exported or anonymous
+			  functions among them if they are called
+			  dynamically from another package.
+			</p>
+			<p>
+			  Click a node to visit that function's source code.
+			  From there you can visit its callers by
+			  clicking its declaring <code>func</code>
+			  token.
+			</p>
+			<p>
+			  Functions may be omitted if they were
+			  determined to be unreachable in the
+			  particular programs or tests that were
+			  analyzed.
+			</p>
+			<!-- Zero means show all package entry points. -->
+			<ul style="margin-left: 0.5in" id="callgraph-0" class="treeview"></ul>
+		</div>
+		</div> <!-- #pkg-callgraph -->
+
+		
+			<h2 id="pkg-constants">Constants</h2>
+			
+				
+				<pre>const (
+    <span id="AXIS_LEFT">AXIS_LEFT</span> = <a href="/pkg/builtin/#iota">iota</a>
+    <span id="AXIS_RIGHT">AXIS_RIGHT</span>
+)</pre>
+			
+				
+				<pre>const (
+    <span id="DRAW_INDEPENDENT">DRAW_INDEPENDENT</span> = 1 &lt;&lt; <a href="/pkg/builtin/#iota">iota</a>
+    <span id="DRAW_RELATIVE">DRAW_RELATIVE</span>
+)</pre>
+			
+				<p>
+List of possible colors
+</p>
+
+				<pre>const (
+    <span id="BLACK">BLACK</span> = <a href="/pkg/builtin/#iota">iota</a>
+    <span id="RED">RED</span>
+    <span id="GREEN">GREEN</span>
+    <span id="YELLOW">YELLOW</span>
+    <span id="BLUE">BLUE</span>
+    <span id="MAGENTA">MAGENTA</span>
+    <span id="CYAN">CYAN</span>
+    <span id="WHITE">WHITE</span>
+)</pre>
+			
+				
+				<pre>const <span id="DEFAULT_BORDER">DEFAULT_BORDER</span> = &#34;- │ ┌ ┐ └ ┘&#34;</pre>
+			
+				
+				<pre>const <span id="PCT">PCT</span> = 0x8000 &lt;&lt; shift</pre>
+			
+				<p>
+Reset all custom styles
+</p>
+
+				<pre>const <span id="RESET">RESET</span> = &#34;\033[0m&#34;</pre>
+			
+				<p>
+Reset to default color
+</p>
+
+				<pre>const <span id="RESET_COLOR">RESET_COLOR</span> = &#34;\033[32m&#34;</pre>
+			
+				<p>
+Return curor to start of line and clean it
+</p>
+
+				<pre>const <span id="RESET_LINE">RESET_LINE</span> = &#34;\r\033[K&#34;</pre>
+			
+		
+		
+			<h2 id="pkg-variables">Variables</h2>
+			
+				
+				<pre>var <span id="Output">Output</span> *<a href="/pkg/bufio/">bufio</a>.<a href="/pkg/bufio/#Writer">Writer</a> = <a href="/pkg/bufio/">bufio</a>.<a href="/pkg/bufio/#NewWriter">NewWriter</a>(<a href="/pkg/os/">os</a>.<a href="/pkg/os/#Stdout">Stdout</a>)</pre>
+			
+				<p>
+Global screen buffer
+Its not recommented write to buffer dirrectly, use package Print,Printf,Println fucntions instead.
+</p>
+
+				<pre>var <span id="Screen">Screen</span> *<a href="/pkg/bytes/">bytes</a>.<a href="/pkg/bytes/#Buffer">Buffer</a> = <a href="/pkg/builtin/#new">new</a>(<a href="/pkg/bytes/">bytes</a>.<a href="/pkg/bytes/#Buffer">Buffer</a>)</pre>
+			
+		
+		
+			
+			
+			<h2 id="Background">func <a href="/src/target/terminal.go?s=3851:3896#L175">Background</a>
+				<a class="permalink" href="#Background">&#xb6;</a>
+			</h2>
+			<pre>func Background(str <a href="/pkg/builtin/#string">string</a>, color <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+Change background color of string:
+</p>
+<pre>tm.Background(&#34;string&#34;, tm.RED)
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Bold">func <a href="/src/target/terminal.go?s=3100:3128#L146">Bold</a>
+				<a class="permalink" href="#Bold">&#xb6;</a>
+			</h2>
+			<pre>func Bold(str <a href="/pkg/builtin/#string">string</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+Make bold
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Clear">func <a href="/src/target/terminal.go?s=2008:2020#L100">Clear</a>
+				<a class="permalink" href="#Clear">&#xb6;</a>
+			</h2>
+			<pre>func Clear()</pre>
+			<p>
+Clear screen
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Color">func <a href="/src/target/terminal.go?s=3325:3365#L156">Color</a>
+				<a class="permalink" href="#Color">&#xb6;</a>
+			</h2>
+			<pre>func Color(str <a href="/pkg/builtin/#string">string</a>, color <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			<p>
+Apply given color to string:
+</p>
+<pre>tm.Color(&#34;RED STRING&#34;, tm.RED)
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Context">func <a href="/src/target/terminal.go?s=4937:4983#L232">Context</a>
+				<a class="permalink" href="#Context">&#xb6;</a>
+			</h2>
+			<pre>func Context(data <a href="/pkg/builtin/#string">string</a>, idx, max <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="CurrentHeight">func <a href="/src/target/terminal.go?s=4329:4353#L202">CurrentHeight</a>
+				<a class="permalink" href="#CurrentHeight">&#xb6;</a>
+			</h2>
+			<pre>func CurrentHeight() <a href="/pkg/builtin/#int">int</a></pre>
+			<p>
+Get current height. Line count in Screen buffer.
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Flush">func <a href="/src/target/terminal.go?s=4464:4476#L207">Flush</a>
+				<a class="permalink" href="#Flush">&#xb6;</a>
+			</h2>
+			<pre>func Flush()</pre>
+			<p>
+Flush buffer and ensure that it will not overflow screen
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="GetXY">func <a href="/src/target/terminal.go?s=1514:1549#L70">GetXY</a>
+				<a class="permalink" href="#GetXY">&#xb6;</a>
+			</h2>
+			<pre>func GetXY(x <a href="/pkg/builtin/#int">int</a>, y <a href="/pkg/builtin/#int">int</a>) (<a href="/pkg/builtin/#int">int</a>, <a href="/pkg/builtin/#int">int</a>)</pre>
+			<p>
+Get relative or absolute coorditantes
+To get relative, set PCT flag to number:
+</p>
+<pre>// Get 10% of total width to `x` and 20 to y
+x, y = tm.GetXY(10|tm.PCT, 20)
+</pre>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Height">func <a href="/src/target/terminal.go?s=4177:4194#L193">Height</a>
+				<a class="permalink" href="#Height">&#xb6;</a>
+			</h2>
+			<pre>func Height() <a href="/pkg/builtin/#int">int</a></pre>
+			<p>
+Get console height
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Highlight">func <a href="/src/target/terminal.go?s=3500:3552#L162">Highlight</a>
+				<a class="permalink" href="#Highlight">&#xb6;</a>
+			</h2>
+			<pre>func Highlight(str, substr <a href="/pkg/builtin/#string">string</a>, color <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="HighlightRegion">func <a href="/src/target/terminal.go?s=3643:3703#L167">HighlightRegion</a>
+				<a class="permalink" href="#HighlightRegion">&#xb6;</a>
+			</h2>
+			<pre>func HighlightRegion(str <a href="/pkg/builtin/#string">string</a>, from, to, color <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a></pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="MoveCursor">func <a href="/src/target/terminal.go?s=2090:2119#L105">MoveCursor</a>
+				<a class="permalink" href="#MoveCursor">&#xb6;</a>
+			</h2>
+			<pre>func MoveCursor(x <a href="/pkg/builtin/#int">int</a>, y <a href="/pkg/builtin/#int">int</a>)</pre>
+			<p>
+Move cursor to given position
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MoveCursorBackward">func <a href="/src/target/terminal.go?s=2595:2628#L125">MoveCursorBackward</a>
+				<a class="permalink" href="#MoveCursorBackward">&#xb6;</a>
+			</h2>
+			<pre>func MoveCursorBackward(bias <a href="/pkg/builtin/#int">int</a>)</pre>
+			<p>
+Move cursor backward relative the current position
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MoveCursorDown">func <a href="/src/target/terminal.go?s=2337:2366#L115">MoveCursorDown</a>
+				<a class="permalink" href="#MoveCursorDown">&#xb6;</a>
+			</h2>
+			<pre>func MoveCursorDown(bias <a href="/pkg/builtin/#int">int</a>)</pre>
+			<p>
+Move cursor down relative the current position
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MoveCursorForward">func <a href="/src/target/terminal.go?s=2464:2496#L120">MoveCursorForward</a>
+				<a class="permalink" href="#MoveCursorForward">&#xb6;</a>
+			</h2>
+			<pre>func MoveCursorForward(bias <a href="/pkg/builtin/#int">int</a>)</pre>
+			<p>
+Move cursor forward relative the current position
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MoveCursorUp">func <a href="/src/target/terminal.go?s=2215:2242#L110">MoveCursorUp</a>
+				<a class="permalink" href="#MoveCursorUp">&#xb6;</a>
+			</h2>
+			<pre>func MoveCursorUp(bias <a href="/pkg/builtin/#int">int</a>)</pre>
+			<p>
+Move cursor up relative the current position
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="MoveTo">func <a href="/src/target/terminal.go?s=2701:2751#L130">MoveTo</a>
+				<a class="permalink" href="#MoveTo">&#xb6;</a>
+			</h2>
+			<pre>func MoveTo(str <a href="/pkg/builtin/#string">string</a>, x <a href="/pkg/builtin/#int">int</a>, y <a href="/pkg/builtin/#int">int</a>) (out <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+Move string to possition
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Print">func <a href="/src/target/terminal.go?s=4650:4697#L220">Print</a>
+				<a class="permalink" href="#Print">&#xb6;</a>
+			</h2>
+			<pre>func Print(a ...interface{}) (n <a href="/pkg/builtin/#int">int</a>, err <a href="/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="Printf">func <a href="/src/target/terminal.go?s=4826:4889#L228">Printf</a>
+				<a class="permalink" href="#Printf">&#xb6;</a>
+			</h2>
+			<pre>func Printf(format <a href="/pkg/builtin/#string">string</a>, a ...interface{}) (n <a href="/pkg/builtin/#int">int</a>, err <a href="/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="Println">func <a href="/src/target/terminal.go?s=4736:4785#L224">Println</a>
+				<a class="permalink" href="#Println">&#xb6;</a>
+			</h2>
+			<pre>func Println(a ...interface{}) (n <a href="/pkg/builtin/#int">int</a>, err <a href="/pkg/builtin/#error">error</a>)</pre>
+			
+			
+			
+
+		
+			
+			
+			<h2 id="ResetLine">func <a href="/src/target/terminal.go?s=2935:2974#L139">ResetLine</a>
+				<a class="permalink" href="#ResetLine">&#xb6;</a>
+			</h2>
+			<pre>func ResetLine(str <a href="/pkg/builtin/#string">string</a>) (out <a href="/pkg/builtin/#string">string</a>)</pre>
+			<p>
+Return carrier to start of line
+</p>
+
+			
+			
+
+		
+			
+			
+			<h2 id="Width">func <a href="/src/target/terminal.go?s=4054:4070#L182">Width</a>
+				<a class="permalink" href="#Width">&#xb6;</a>
+			</h2>
+			<pre>func Width() <a href="/pkg/builtin/#int">int</a></pre>
+			<p>
+Get console width
+</p>
+
+			
+			
+
+		
+		
+			
+			
+			<h2 id="Box">type <a href="/src/target/box.go?s=355:648#L10">Box</a>
+				<a class="permalink" href="#Box">&#xb6;</a>
+			</h2>
+			<p>
+Box allows you to create independent parts of screen, with its own buffer and borders.
+Can be used for creating modal windows
+</p>
+<p>
+Generates boxes likes this:
+┌--------┐
+│hello   │
+│world   │
+│        │
+└--------┘
+</p>
+
+			<pre>type Box struct {
+<span id="Box.Buf"></span>    Buf *<a href="/pkg/bytes/">bytes</a>.<a href="/pkg/bytes/#Buffer">Buffer</a>
+
+<span id="Box.Width"></span>    Width  <a href="/pkg/builtin/#int">int</a>
+<span id="Box.Height"></span>    Height <a href="/pkg/builtin/#int">int</a>
+
+    <span class="comment">// To get even padding: PaddingX ~= PaddingY*4</span>
+<span id="Box.PaddingX"></span>    PaddingX <a href="/pkg/builtin/#int">int</a>
+<span id="Box.PaddingY"></span>    PaddingY <a href="/pkg/builtin/#int">int</a>
+
+    <span class="comment">// Should contain 6 border pieces separated by spaces</span>
+    <span class="comment">//</span>
+    <span class="comment">// Example border:</span>
+    <span class="comment">//   &#34;- │ ┌ ┐ └ ┘&#34;</span>
+<span id="Box.Border"></span>    Border <a href="/pkg/builtin/#string">string</a>
+
+<span id="Box.Flags"></span>    Flags <a href="/pkg/builtin/#int">int</a> <span class="comment">// Not used now</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewBox">func <a href="/src/target/box.go?s=825:871#L35">NewBox</a>
+					<a class="permalink" href="#NewBox">&#xb6;</a>
+				</h3>
+				<pre>func NewBox(width, height <a href="/pkg/builtin/#int">int</a>, flags <a href="/pkg/builtin/#int">int</a>) *<a href="#Box">Box</a></pre>
+				<p>
+Create new Box.
+Width and height can be relative:
+</p>
+<pre>// Create box with 50% with of current screen and 10 lines height
+box := tm.NewBox(50|tm.PCT, 10, 0)
+</pre>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Box.String">func (*Box) <a href="/src/target/box.go?s=1184:1219#L55">String</a>
+					<a class="permalink" href="#Box.String">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="#Box">Box</a>) String() (out <a href="/pkg/builtin/#string">string</a>)</pre>
+				<p>
+Render Box
+</p>
+
+				
+				
+				
+			
+				
+				<h3 id="Box.Write">func (*Box) <a href="/src/target/box.go?s=1099:1141#L50">Write</a>
+					<a class="permalink" href="#Box.Write">&#xb6;</a>
+				</h3>
+				<pre>func (b *<a href="#Box">Box</a>) Write(p []<a href="/pkg/builtin/#byte">byte</a>) (<a href="/pkg/builtin/#int">int</a>, <a href="/pkg/builtin/#error">error</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Chart">type <a href="/src/target/plot.go?s=380:444#L23">Chart</a>
+				<a class="permalink" href="#Chart">&#xb6;</a>
+			</h2>
+			
+			<pre>type Chart interface {
+    Draw(data <a href="#DataTable">DataTable</a>, flags <a href="/pkg/builtin/#int">int</a>) <a href="/pkg/builtin/#string">string</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+		
+			
+			
+			<h2 id="DataTable">type <a href="/src/target/plot.go?s=151:213#L9">DataTable</a>
+				<a class="permalink" href="#DataTable">&#xb6;</a>
+			</h2>
+			
+			<pre>type DataTable struct {
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+
+			
+				
+				<h3 id="DataTable.AddColumn">func (*DataTable) <a href="/src/target/plot.go?s=215:257#L15">AddColumn</a>
+					<a class="permalink" href="#DataTable.AddColumn">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="#DataTable">DataTable</a>) AddColumn(name <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="DataTable.AddRow">func (*DataTable) <a href="/src/target/plot.go?s=300:343#L19">AddRow</a>
+					<a class="permalink" href="#DataTable.AddRow">&#xb6;</a>
+				</h3>
+				<pre>func (d *<a href="#DataTable">DataTable</a>) AddRow(elms ...<a href="/pkg/builtin/#float64">float64</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="LineChart">type <a href="/src/target/plot.go?s=446:629#L27">LineChart</a>
+				<a class="permalink" href="#LineChart">&#xb6;</a>
+			</h2>
+			
+			<pre>type LineChart struct {
+<span id="LineChart.Buf"></span>    Buf []<a href="/pkg/builtin/#string">string</a>
+
+<span id="LineChart.Width"></span>    Width  <a href="/pkg/builtin/#int">int</a>
+<span id="LineChart.Height"></span>    Height <a href="/pkg/builtin/#int">int</a>
+
+<span id="LineChart.Flags"></span>    Flags <a href="/pkg/builtin/#int">int</a>
+    <span class="comment">// contains filtered or unexported fields</span>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewLineChart">func <a href="/src/target/plot.go?s=843:890#L61">NewLineChart</a>
+					<a class="permalink" href="#NewLineChart">&#xb6;</a>
+				</h3>
+				<pre>func NewLineChart(width, height <a href="/pkg/builtin/#int">int</a>) *<a href="#LineChart">LineChart</a></pre>
+				
+				
+				
+			
+
+			
+				
+				<h3 id="LineChart.Draw">func (*LineChart) <a href="/src/target/plot.go?s=2626:2680#L143">Draw</a>
+					<a class="permalink" href="#LineChart.Draw">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="#LineChart">LineChart</a>) Draw(data *<a href="#DataTable">DataTable</a>) (out <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LineChart.DrawAxes">func (*LineChart) <a href="/src/target/plot.go?s=1065:1136#L73">DrawAxes</a>
+					<a class="permalink" href="#LineChart.DrawAxes">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="#LineChart">LineChart</a>) DrawAxes(maxX, minX, maxY, minY <a href="/pkg/builtin/#float64">float64</a>, index <a href="/pkg/builtin/#int">int</a>)</pre>
+				
+				
+				
+				
+			
+				
+				<h3 id="LineChart.DrawLine">func (*LineChart) <a href="/src/target/plot.go?s=4455:4518#L224">DrawLine</a>
+					<a class="permalink" href="#LineChart.DrawLine">&#xb6;</a>
+				</h3>
+				<pre>func (c *<a href="#LineChart">LineChart</a>) DrawLine(x0, y0, x1, y1 <a href="/pkg/builtin/#int">int</a>, symbol <a href="/pkg/builtin/#string">string</a>)</pre>
+				
+				
+				
+				
+			
+		
+			
+			
+			<h2 id="Table">type <a href="/src/target/table.go?s=362:421#L6">Table</a>
+				<a class="permalink" href="#Table">&#xb6;</a>
+			</h2>
+			<p>
+Tabwriter with own buffer:
+</p>
+<pre>    	totals := tm.NewTable(0, 10, 5, &#39; &#39;, 0)
+		fmt.Fprintf(totals, &#34;Time\tStarted\tActive\tFinished\n&#34;)
+		fmt.Fprintf(totals, &#34;%s\t%d\t%d\t%d\n&#34;, &#34;All&#34;, started, started-finished, finished)
+		tm.Println(totals)
+
+ Based on <a href="http://golang.org/pkg/text/tabwriter">http://golang.org/pkg/text/tabwriter</a>
+</pre>
+
+			<pre>type Table struct {
+    <a href="/pkg/text/tabwriter/">tabwriter</a>.<a href="/pkg/text/tabwriter/#Writer">Writer</a>
+
+<span id="Table.Buf"></span>    Buf *<a href="/pkg/bytes/">bytes</a>.<a href="/pkg/bytes/#Buffer">Buffer</a>
+}</pre>
+
+			
+
+			
+
+			
+			
+			
+
+			
+				
+				<h3 id="NewTable">func <a href="/src/target/table.go?s=489:568#L13">NewTable</a>
+					<a class="permalink" href="#NewTable">&#xb6;</a>
+				</h3>
+				<pre>func NewTable(minwidth, tabwidth, padding <a href="/pkg/builtin/#int">int</a>, padchar <a href="/pkg/builtin/#byte">byte</a>, flags <a href="/pkg/builtin/#uint">uint</a>) *<a href="#Table">Table</a></pre>
+				<p>
+Same as here <a href="http://golang.org/pkg/text/tabwriter/#Writer.Init">http://golang.org/pkg/text/tabwriter/#Writer.Init</a>
+</p>
+
+				
+				
+			
+
+			
+				
+				<h3 id="Table.String">func (*Table) <a href="/src/target/table.go?s=699:730#L21">String</a>
+					<a class="permalink" href="#Table.String">&#xb6;</a>
+				</h3>
+				<pre>func (t *<a href="#Table">Table</a>) String() <a href="/pkg/builtin/#string">string</a></pre>
+				
+				
+				
+				
+			
+		
+	
+
+	
+
+
+
+
+
+	
+	
+		<h2 id="pkg-subdirectories">Subdirectories</h2>
+	
+	
+
+
+	<div class="pkg-dir">
+		<table>
+			<tr>
+				<th class="pkg-name">Name</th>
+				<th class="pkg-synopsis">Synopsis</th>
+			</tr>
+
+			
+			<tr>
+				<td colspan="2"><a href="..">..</a></td>
+			</tr>
+			
+
+			
+				
+					<tr>
+						<td class="pkg-name" style="padding-left: 0px;">
+							<a href="examples/">examples</a>
+						</td>
+						<td class="pkg-synopsis">
+							
+						</td>
+					</tr>
+				
+			
+		</table>
+	</div>
+
+
+	
+

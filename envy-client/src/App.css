@@ -1,0 +1,37 @@
+#app {
+  width: 100%;
+}
+.close-btn {
+  width: auto;
+  height: auto;
+  margin: 20px !important;
+}
+
+i {
+  width: auto;
+  height: auto;
+  /* margin: 20px; */
+}
+i:hover {
+  cursor: pointer;
+}
+.edit-icon-holder,
+.close-icon-holder,
+.done-icon-holder {
+  padding: 10px;
+}
+
+.close-icon-holder:hover {
+  color: #f44336;
+}
+
+.edit-icon-holder:hover {
+  color: #2196f3;
+}
+.done-icon-holder:hover {
+  color: #4caf50;
+}
+
+.card {
+  flex: 0 0 auto;
+}
