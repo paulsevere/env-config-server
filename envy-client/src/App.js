@@ -7,7 +7,7 @@ import thunk from "redux-thunk";
 import reducers from "./reducers";
 import "./registerServiceWorker";
 import Env from "./components/Env.jsx";
-import "./App.css";
+import "./main.css";
 import { fetchEnv } from "./components/EnvActions";
 const store = createStore(reducers, applyMiddleware(thunk));
 

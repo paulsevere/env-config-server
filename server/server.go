@@ -9,8 +9,8 @@ import (
 )
 
 type Action struct {
-	Type    string         `json:"type"`
-	Payload []env.Variable `json:"payload"`
+	Type    string         `json:"type" query:"type"`
+	Payload []env.Variable `json:"payload" query:"payload"`
 }
 
 func Act(typ string) Action {
@@ -35,6 +35,7 @@ func Run() {
 	e.GET("/all", getAll)
 	e.DELETE("/variable", handleDelete)
 	e.GET("/variable", handleNew)
+	e.POST("/variable", newVar)
 	e.Logger.Fatal(e.Start(":8080"))
 }
 
@@ -42,6 +43,14 @@ func getAll(c echo.Context) (err error) {
 	println("GETTING CURRENT ENV")
 	return c.JSON(http.StatusOK, Act("CURRENT_ENV").Load(env.CurrentEnv()))
 
+}
+
+func newVar(c echo.Context) (err error) {
+	a := new(Action)
+	if err = c.Bind(a); err != nil {
+		return
+	}
+	return c.JSON(http.StatusOK, a)
 }
 
 func handleDelete(c echo.Context) (err error) {

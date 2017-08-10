@@ -8,7 +8,7 @@ const Env = props => {
   let { deleteVar } = props;
   console.log(props);
   return (
-    <div style={{}}>
+    <div className="env">
       {props.env.map(e => <Pair deleteVar={deleteVar} pair={e} />)}
     </div>
   );

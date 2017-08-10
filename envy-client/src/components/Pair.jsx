@@ -6,24 +6,16 @@ const onDelete = (props, event) => {
 };
 
 const Pair = props =>
-  <div style={{ display: "flex", flex: "0 0 auto" }}>
-    <div className="card g--2">
+  <div className="pair">
+    <div onClick={linkEvent(props, onDelete)} className="action delete Red">
+      rm
+    </div>
+    <div className="name Cyan">
       {props.pair.name}
     </div>
-    <div id={props.pair.name} contenteditable className="card g--4">
+    <div id={props.pair.name} contenteditable className="value Green">
       {props.pair.value}
     </div>
-
-    <div onClick={linkEvent(props, onDelete)} className="close-icon-holder">
-      <i className="material-icons md-48">close</i>
-    </div>
-    {(props.editing &&
-      <div className="done-icon-holder">
-        <i className="material-icons md-48">check</i>
-      </div>) ||
-      <div className="edit-icon-holder">
-        <i className="material-icons md-48">mode_edit</i>
-      </div>}
   </div>;
 
 export default Pair;

@@ -16,5 +16,8 @@
     "build": "inferno-scripts build",
     "test": "inferno-scripts test --env=jsdom",
     "eject": "inferno-scripts eject"
+  },
+  "devDependencies": {
+    "sass-loader": "^6.0.6"
   }
 }
