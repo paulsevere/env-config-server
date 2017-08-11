@@ -1,9 +1,9 @@
 package main
 
-import "github.com/paulsevere/envy/server"
+import (
+	"github.com/paulsevere/envy/cmd"
+)
 
 func main() {
-	server.Run()
-	// vars := env.CurrentEnv()
-	// spew.Dump(vars)
+	cmd.Execute()
 }
